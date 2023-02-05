@@ -34,13 +34,19 @@
 <h2 id="heading">
     Research Paper Recommendation System
 </h2>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="form">
-        <input type="text" name="query" placeholder="Enter research paper name">
+        <input type="text" name="query" placeholder="Enter keywords to find similar research papers...">
     </div>
     <div class="form">
-        <button class="sub-btn" type="submit">Search</button>
+      <b>Or Upload a Research Paper</b>
+    </div>
+    <div class="form">
+      <input type="file" name="pdf_file" accept=".pdf">
+    </div>
+    <div class="form">
+        <button class="sub-btn" type="submit">Recommend</button>
     </div>
 </form>
 </div>

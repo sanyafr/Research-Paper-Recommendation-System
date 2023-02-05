@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from recommender.views import home_view
+from recommender.views import home_view, rec_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
+    path('recommendations/', rec_view, name='rec'),
 ]
